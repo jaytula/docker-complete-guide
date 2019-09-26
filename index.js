@@ -7,6 +7,6 @@ app.get("/", (req, res) => {
 });
 
 const PORT = 8080;
-express.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`simpleweb running on ${PORT}`);
 });
