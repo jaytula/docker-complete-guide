@@ -1,15 +1,16 @@
 {
   "dependencies": {
-    "express": "*"
+    "express": "*",
+    "redis": "2.8.0"
   },
   "scripts": {
     "start": "node index.js"
   },
-  "name": "docker-complete-guide",
+  "name": "visits",
   "version": "1.0.0",
   "main": "index.js",
   "author": "",
   "license": "ISC",
-  "description": "Simple Web",
+  "description": "Visits",
   "private": true
 }
