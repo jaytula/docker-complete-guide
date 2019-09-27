@@ -3,6 +3,9 @@ language: node_js
 node_js:
   - 12.8.0
 
-build_on_success:
-  - if [ "$BRANCH" == "master" ]; then git remote add dokku dokku@test00.codepasta.io:test00; fi
-  - if [ "$BRANCH" == "master" ]; then git push dokku master; fi
+build:
+  ci:
+    - echo 'CI running'
+  on_success:
+    - if [ "$BRANCH" == "master" ]; then git remote add dokku dokku@test00.codepasta.io:test00; fi
+    - if [ "$BRANCH" == "master" ]; then git push dokku master; fi
