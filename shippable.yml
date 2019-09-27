@@ -1,0 +1,5 @@
+language: node_js
+
+on_success:
+  - if [ "$BRANCH" == "master" ]; then git remote add dokku dokku@test00.codepasta.io:test00; fi
+  - if [ "$BRANCH" == "master" ]; then git push dokku master; fi
