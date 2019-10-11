@@ -7,6 +7,14 @@ services:
   redis:
     image: 'redis:latest'
 
+  nginx:
+    build:
+      dockerfile: dev.Dockerfile
+      context: ./nginx
+    restart: always
+    ports:
+      - '3050:80'
+      
   api:
     build:
       dockerfile: dev.Dockerfile
